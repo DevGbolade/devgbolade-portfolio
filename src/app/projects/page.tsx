@@ -2,7 +2,7 @@ import { type Metadata } from 'next'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
-export const projectData = [
+const projectData = [
   {
     year: 2020,
     project: 'DevConnector',

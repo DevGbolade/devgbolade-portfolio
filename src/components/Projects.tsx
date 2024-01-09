@@ -1,7 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import { Card } from './Card'
-import { projectData } from '@/app/projects/page'
 interface ProjectItemProps {
   image: string
   name: string
@@ -131,14 +128,6 @@ const projects = [
     link: 'https://example.com/project1',
   },
 ]
-
-const dataMapper = projectData.map((el: any) => ({
-  name: el.project,
-  description:
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est cum accusantium pariatur corporis debitis dolores quibusd ',
-  builtWith: el.buildWith,
-  link: el.link,
-}))
 
 const Projects: React.FC = () => {
   return (
