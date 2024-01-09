@@ -2,7 +2,7 @@ import { type Metadata } from 'next'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
-const projects = [
+export const projectData = [
   {
     year: 2020,
     project: 'DevConnector',
@@ -70,7 +70,7 @@ export default function Projects() {
         <li className="font-bold">Built With</li>
         <li className="font-bold">Link</li>
       </ul>
-      {projects
+      {projectData
         .sort((a, b) => a.year - b.year)
         .map((item, index) => (
           <ul

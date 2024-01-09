@@ -104,7 +104,7 @@ export default async function Home() {
           </div>
           <div className="flex flex-col items-center space-y-10 lg:pl-16 xl:pl-24">
             <ToolsImages />
-            <Projects />
+            {/* <Projects /> */}
           </div>
         </div>
       </Container>
