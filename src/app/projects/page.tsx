@@ -1,6 +1,7 @@
 import { type Metadata } from 'next'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { LinkIMage } from '@/components/Icons'
 
 const projectData = [
   {
@@ -11,7 +12,7 @@ const projectData = [
   },
   {
     year: 2019,
-    project: 'Wayfarer API Real Project',
+    project: 'Wayfarer API',
     builtWith: 'Node.js, Express',
     link: 'https://github.com/DevGbolade/wayfarer-api-real-project',
   },
@@ -60,37 +61,68 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <SimpleLayout title="Things I’ve made trying to put my dent in the universe.">
-      <ul
-        role="list"
-        className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-      ></ul>
-      <ul className="grid grid-cols-5 justify-start gap-x-8 border-b-[0.5px] p-2">
-        <li className="font-bold">Year</li>
-        <li className="font-bold">Project</li>
-        <li className="font-bold">Built With</li>
-        <li className="font-bold">Link</li>
-      </ul>
-      {projectData
-        .sort((a, b) => a.year - b.year)
-        .map((item, index) => (
-          <ul
-            style={{ gridAutoFlow: 'column' }}
-            key={index}
-            className="content- grid grid-cols-5 justify-start gap-x-8 border-b-[0.5px] p-2"
-          >
-            <li>{item.year}</li>
+      <div className="hidden md:block">
+        <ul
+          role="list"
+          className="grid grid-cols-5 justify-start gap-x-8 border-b-[0.5px] p-2"
+        >
+          <li className="hidden font-bold md:block">Year</li>
+          <li className="font-bold">Project</li>
+          <li className="hidden font-bold md:block">Built With</li>
+          <li className="font-bold">Link</li>
+        </ul>
+        {projectData
+          .sort((a, b) => a.year - b.year)
+          .map((item, index) => (
+            <ul
+              style={{ gridAutoFlow: 'column' }}
+              key={index}
+              className="content- grid grid-cols-5 justify-start gap-x-8 border-b-[0.5px] p-2"
+            >
+              <li className="hidden md:block">{item.year}</li>
 
-            <li>{item.project}</li>
-            <ul className="flex flex-row flex-wrap gap-2">
-              {item.builtWith.split(',').map((tech, techIndex) => (
-                <Card.Button key={techIndex}>{tech}</Card.Button>
-              ))}
+              <li className="text-xs md:text-base">{item.project}</li>
+              <ul className=" hidden flex-row flex-wrap gap-2 md:flex">
+                {item.builtWith.split(',').map((tech, techIndex) => (
+                  <Card.Button key={techIndex}>{tech}</Card.Button>
+                ))}
+              </ul>
+              <li>
+                <Card.Link className="text-xs md:text-base" href={item.link}>
+                  {item.link}{' '}
+                </Card.Link>
+              </li>
             </ul>
-            <li>
-              <Card.Link href={item.link}>{item.link} </Card.Link>
-            </li>
-          </ul>
-        ))}
+          ))}
+      </div>
+      <div className="block md:hidden">
+        <ul
+          role="list"
+          className="grid grid-cols-3 justify-start gap-x-8 border-b-[0.5px] p-2"
+        >
+          <li className=" font-bold ">Year</li>
+          <li className="font-bold">Project</li>
+          <li className="font-bold">Link</li>
+        </ul>
+        {projectData
+          .sort((a, b) => a.year - b.year)
+          .map((item, index) => (
+            <ul
+              style={{ gridAutoFlow: 'column' }}
+              key={index}
+              className="content- grid grid-cols-3 justify-start gap-x-8 border-b-[0.5px] p-2"
+            >
+              <li className="">{item.year}</li>
+
+              <li className="text-xs md:text-base">{item.project}</li>
+              <li className="">
+                <Card.Link className="text-xs md:text-base" href={item.link}>
+                  <LinkIMage />
+                </Card.Link>
+              </li>
+            </ul>
+          ))}
+      </div>
     </SimpleLayout>
   )
 }
