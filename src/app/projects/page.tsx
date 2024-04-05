@@ -5,6 +5,13 @@ import { LinkIMage } from '@/components/Icons'
 
 const projectData = [
   {
+    year: 2024,
+    project: 'Chat server API',
+    builtWith:
+      'Node.js, Express, Typescript, Redux, Redis, Terraform, SocketIO, Jest, MongoDB, AWS',
+    link: 'https://github.com/DevGbolade/chat-api',
+  },
+  {
     year: 2020,
     project: 'DevConnector',
     builtWith: 'Node.js, Express, React, Redux',
@@ -55,7 +62,7 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: 'My projects',
 }
 
 export default function Projects() {
@@ -72,7 +79,7 @@ export default function Projects() {
           <li className="font-bold">Link</li>
         </ul>
         {projectData
-          .sort((a, b) => a.year - b.year)
+          .sort((a, b) => b.year - a.year)
           .map((item, index) => (
             <ul
               style={{ gridAutoFlow: 'column' }}

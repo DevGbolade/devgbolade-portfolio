@@ -42,8 +42,8 @@ export const metadata = {
 export default function Uses() {
   return (
     <SimpleLayout
-      title="Software I use, gadgets I love, and other things I recommend."
-      intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+      title="Software I use to make Magic."
+      intro="I get asked a lot about the things I use to build software, stay productive. Here’s a big list of all of my favorite stuff."
     >
       <div className="space-y-20">
         <ToolsSection title="Workstation">
@@ -81,20 +81,24 @@ export default function Uses() {
             powerful and works for me everytime
           </Tool>
           <Tool title="iTerm2">
-            I’m honestly not even sure what features I get with this that aren’t
-            just part of the macOS Terminal but it’s what I use.
+            {''}
+            {/* I’m honestly not even sure what features I get with this that aren’t
+            just part of the macOS Terminal but it’s what I use. */}
           </Tool>
           <Tool title="TablePlus">
-            Great software for working with databases. Has saved me from
+            {''}
+            {/* Great software for working with databases. Has saved me from
             building about a thousand admin interfaces for my various projects
-            over the years.
+            over the years. */}
           </Tool>
         </ToolsSection>
         <ToolsSection title="Design">
           <Tool title="Figma">
-            We started using Figma as just a design tool but now it’s become our
+            {/* We started using Figma as just a design tool but now it’s become our
             virtual whiteboard for the entire company. Never would have expected
-            the collaboration features to be the real hook.
+            the collaboration features to be the real hook. */}
+            Figma is my go-to design tool. Over the years, I have gotten used to
+            its flexibility and robustness.
           </Tool>
         </ToolsSection>
         {/* <ToolsSection title="Productivity">
