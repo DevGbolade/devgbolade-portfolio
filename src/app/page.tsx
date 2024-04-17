@@ -30,9 +30,7 @@ function Work({ role }: { role: any }) {
       <Card.Title className="text-red-500" as="h1" href={`#`}>
         {role.company}
       </Card.Title>
-      <Card.Title className="text" href={`#`}>
-        {role.title}
-      </Card.Title>
+      <Card.Title className="text">{role.title}</Card.Title>
       <Card.Eyebrow as="time" dateTime={role.date} decorate>
         {role.date}
       </Card.Eyebrow>

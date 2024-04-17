@@ -181,7 +181,7 @@ const ToolsImages = () => {
             height="40"
           />{' '}
         </a>{' '}
-        <a href="https://laravel.com/" target="_blank">
+        {/* <a href="https://laravel.com/" target="_blank">
           {' '}
           <Image
             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg"
@@ -189,7 +189,7 @@ const ToolsImages = () => {
             width="40"
             height="40"
           />{' '}
-        </a>{' '}
+        </a>{' '} */}
         <a href="https://www.linux.org/" target="_blank">
           {' '}
           <Image
